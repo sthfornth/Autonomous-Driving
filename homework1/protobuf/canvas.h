@@ -3,6 +3,7 @@
 #pragma once
 
 #include <string>
+#include <cmath>
 #include "homework1/protobuf/proto/geometry.pb.h"
 
 namespace homework1 {
@@ -21,6 +22,10 @@ class Canvas {
 
   void ParseFromString(const std::string& serialzation);
   const std::string SerializeToString() const;
+
+  double GetPointDist(const homework1::geometry::Point3D& p1,\
+   const homework1::geometry::Point3D& p2);
+  double GetPolyLength();
 
  private:
   homework1::geometry::Polygon polygon_;
