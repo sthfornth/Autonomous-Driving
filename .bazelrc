@@ -6,7 +6,7 @@ common --color=yes
 build --experimental_sandbox_base=/dev/shm
 
 build --action_env=PATH="/bin:/usr/bin"
-build --crosstool_top=//common/toolchain:default
+# build --crosstool_top=//common/toolchain:default
 build --force_python=PY3
 build --jobs 8 --ram_utilization_factor 50
 
